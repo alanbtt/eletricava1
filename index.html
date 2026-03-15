@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elétrica V.A. - Instalações e Manutenções</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins, sans-serif}
+body{background:#0f172a;color:white}
+header{position:fixed;width:100%;top:0;background:#020617;padding:15px 8%;display:flex;justify-content:space-between;align-items:center;z-index:10}
+header h1{color:#38bdf8}
+nav a{color:white;margin-left:20px;text-decoration:none;font-size:14px}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(120deg,#020617,#1e293b)}
+.hero h2{font-size:42px;margin-bottom:20px}
+.hero p{max-width:600px;margin:auto;margin-bottom:30px}
+.btn{background:#38bdf8;padding:14px 28px;border-radius:8px;color:black;text-decoration:none;font-weight:600;transition:.3s}
+.btn:hover{transform:scale(1.05)}
+
+.section{padding:100px 8%}
+.section h3{text-align:center;font-size:32px;margin-bottom:50px}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.card{background:#1e293b;padding:30px;border-radius:12px;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+.contact{text-align:center}
+.whatsapp-btn{display:inline-block;margin-top:20px;background:#22c55e;padding:16px 30px;border-radius:10px;text-decoration:none;color:white;font-weight:600}
+
+footer{text-align:center;padding:30px;background:#020617}
+
+@media(max-width:768px){
+.about{grid-template-columns:1fr}
+.hero h2{font-size:32px}
+}
+
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Elétrica V.A.</h1>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#servicos">Serviços</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<div>
+<h2>Instalações e Manutenções Elétricas Profissionais</h2>
+<p>Atendemos instalações residenciais e prediais com qualidade, segurança e responsabilidade técnica.</p>
+<a class="btn" href="#contato">Solicitar Orçamento</a>
+</div>
+</section>
+
+<section class="section" id="servicos">
+<h3>Nossos Serviços</h3>
+<div class="services">
+<div class="card fade">
+<h4>Instalações Elétricas</h4>
+<p>Execução completa de projetos de instalações elétricas residenciais e prediais.</p>
+</div>
+
+<div class="card fade">
+<h4>Manutenção</h4>
+<p>Iluminação, tomadas, disjuntores, chuveiros, ventilador de teto e reparos gerais.</p>
+</div>
+
+<div class="card fade">
+<h4>Quadros Elétricos</h4>
+<p>Montagem, adequação e organização de quadros de distribuição.</p>
+</div>
+
+<div class="card fade">
+<h4>Projetos Elétricos</h4>
+<p>Execução de instalações conforme projeto elétrico com responsabilidade técnica. Conforme NR10 e NBR 5410</p>
+</div>
+</div>
+</section>
+
+<section class="section about" id="sobre">
+<div class="fade">
+<h3>Sobre a Empresa</h3>
+<p>A Elétrica V.A. é especializada em serviços elétricos residenciais e prediais. Trabalhamos com segurança, qualidade e responsabilidade técnica para garantir instalações eficientes e confiáveis.</p>
+</div>
+
+<div class="fade">
+<p>Nossa equipe possui formação técnica e experiência prática em instalações elétricas e manutenção elétrica.</p>
+</div>
+</section>
+
+<section class="section contact" id="contato">
+<h3>Solicite um Orçamento</h3>
+<p>Clique no botão abaixo para falar conosco diretamente pelo WhatsApp.</p>
+<a class="whatsapp-btn" href="https://wa.me/5551989950149" target="_blank">Falar no WhatsApp</a>
+</section>
+
+<footer>
+<p>© 2026 Elétrica V.A. - Instalações e Manutenções</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el))
+</script>
+
+</body>
+</html>
